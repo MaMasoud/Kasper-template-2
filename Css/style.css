@@ -1,6 +1,7 @@
 :root{
     --main-color: #19c8fa;
     --transparent-color: rgb(15 116 143 /70%);
+    --section-padding: 100px;
 }
 *{
     -webkit-box-sizing: border-box;
@@ -14,7 +15,6 @@ html{
 }
 body{
     font-family: 'Open Sans', sans-serif;
-    background-color: black;
 }
 ul{
     list-style: none;
@@ -41,6 +41,48 @@ ul{
         width: 1170px;
     }
 }
+/* main heading */
+.main-heading {
+    text-align: center;
+}
+.main-heading h2{
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+    position: relative;
+}
+.main-heading h2::before{
+    content: '';
+    width: 120px;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.main-heading h2::after{
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    background-color: white;
+    position: absolute;
+    bottom: -37px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.main-heading p{
+    width: 550px;
+    max-width: 100%;
+    color: #777;
+    margin: 0 auto 100px; 
+    line-height: 2;
+}
+/* end main heading */
+
 /* Start Header */
 header{
     position: absolute;
@@ -222,3 +264,28 @@ header nav .form i{
     border-color: var(--main-color);
 }
 /* End Landing */
+/* Start Services */
+
+.services{
+    padding: var(--section-padding) 0;
+}
+.services .services-boxs{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-gap: 60px 40px;
+}
+.services .services-boxs .srv-box{
+    display: flex;
+}
+.services .services-boxs .srv-box .icon{
+    margin-right: 50px;
+}
+.services .services-boxs .srv-box h3{
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+.services .services-boxs .srv-box p{
+    color: #777;
+    line-height: 2;
+}
+/* End Services */
