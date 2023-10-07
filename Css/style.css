@@ -563,3 +563,24 @@ header nav .form i{
     text-transform: uppercase;
 }
 /* end statistics */
+/* Start Testimonials */
+.our-skills{
+    padding: var(--section-padding) 0;
+}
+.our-skills .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.our-skills .container h3, .our-skills .container h3+p{
+    text-align: center;
+}
+.our-skills .container .testimonials{
+    flex-basis: 45%;
+}
+
+
+.our-skills .container .skills{
+    flex-basis: 45%;
+}
+/*end Testimonials */
